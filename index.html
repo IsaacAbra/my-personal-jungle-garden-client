@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>My Personal Jungle Garden</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <div class="head container">
+        <div class="row">
+          <div class="col-4 box1">
+          </div>
+
+          <div class="col-4 box2">
+            <img src="https://user-images.githubusercontent.com/53062479/86633174-57620100-bf9e-11ea-9c67-711de00a4118.png" class="logo" />
+          </div>
+
+          <div class="col-4 box3">
+            <section class="menu-dropdown">
+              <div class="dropdown">
+                <div class="dropdown-content">
+                    <p id="show-pcs" class="pc-btn dm pointer">See Collections</p>
+                    <p class="getChangePasswordPage dm pointer">Change Password</p>
+                    <form id="sign-out">
+                      <p class="dm pointer">Sign Out</p>
+                    </form>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <main>
+
+
+        <div>
+          <p id ="message"></p>
+        </div>
+
+        <section class="signup">
+          <form id="sign-up">
+            <input name="credentials[email]" type="email" placeholder="Email" required>
+            <br>
+            <input name="credentials[password]" type="password" placeholder="Password" required>
+            <br>
+            <input name="credentials[password_confirmation]" type="password" placeholder="Password Confirmation" required>
+            <br>
+            <br>
+            <button type="submit">Create Account</button>
+            <br>
+            <p class="getSignInPage pointer switch">I already have an account</p>
+          </form>
+          <br>
+        </section>
+
+        <section class="signin">
+          <form id="sign-in">
+              <input name="credentials[email]" type="email" placeholder="Email" required>
+              <br>
+              <input name="credentials[password]" type="password" placeholder="Password" required>
+              <br>
+              <br>
+              <button type="submit">Sign In</button>
+              <br>
+              <p class="getSignUpPage pointer switch">I don't have an account yet</p>
+          </form>
+          <br>
+        </section>
+
+        <section class="changepw">
+          <h2>Change Password</h2>
+          <form id="change-password">
+              <input name="passwords[old]" type="password" placeholder="Old Password" required>
+              <br>
+              <input name="passwords[new]" type="password" placeholder="New Password" required>
+              <br>
+              <br>
+              <button type="submit">Change Password</button>
+          </form>
+        </section>
+
+        <section class="plant-collections">
+          <div>
+            <div class="my-pc-collections"></div>
+            <div id="content-plant-collections" class="content-plant-collections">
+            </div>
+
+            <button class="getAddPCPage">Add Plant Collection</button>
+            <button class="getDeletePCButtons btn-pc">Delete Plant Collection</button>
+
+          </div>
+        </section>
+
+        <section class="add-pc">
+          <h2>Add Plant Collection</h2>
+          <form id="add-pc">
+            <input name="plantCollection[name]" type="text" placeholder="Collection Name" required>
+            <br>
+            <br>
+            <button data-id="plantCollection._id"  type="submit">Add Collection</button>
+            <p class="back-to-pcs pointer go-back">Nevermind</p>
+          </form>
+        </section>
+
+        <section class="plant-collection">
+          <div>
+            <h2 class="plant-collection-name"></h2>
+
+            <div id="content-plants" class="content-plants"></div>
+            <br>
+            <button class="getEditPCNamePage">Edit Collection Name</button>
+            <button class="get-add-new-plant">Add New Plant</button>
+            <button class="getDeletePlantButtons">Delete Plant</button>
+            <p class="back-to-pcs pointer go-back">See All Collections</p>
+          </div>
+        </section>
+
+        <section class="edit-pc-name">
+          <h3 class="pc-name"></h3>
+          <form id="edit-pc-name">
+            <div class="edit-pc-info"></div>
+            <br>
+            <button type="submit">Update</button>
+          </form>
+          <p class="back-to-pc pointer go-back">Nevermind</p>
+        </section>
+
+        <section class="add-plant">
+          <h2>Add New Plant</h2>
+          <form id="add-plant">
+              <input name="plant[name]" type="text" placeholder="Plant Name" required>
+              <br>
+              <input name="plant[nickName]" type="text" placeholder="Plant Nickname (Optional)">
+              <br>
+              <input name="plant[dateAcquired]" type="text" placeholder="Date Acquired" required>
+              <br>
+              <input name="plant[additionalNotes]" type="text" placeholder="Additional Notes (Optional)">
+              <br>
+              <input name="plant[log]" type="text" placeholder="Log" required>
+              <br>
+              <br>
+              <button type="submit">Add Plant</button>
+              <p class="back-to-pc pointer go-back">Nevermind</p>
+              <br>
+          </form>
+        </section>
+
+        <section class="plant-information">
+        <div class="plant-style">
+          <div id="plant-info" class="plant-info"></div>
+          <br>
+          <br>
+          <button class="getEditPlantPage">Edit</button>
+          <p class="back-to-pc pointer see-plants">See All Plants</p>
+        </div>
+        </section>
+
+        <section class="edit-plant">
+          <h2>Update Plant Info</h2>
+          <form id="edit-plant">
+            <div class="edit-plant-info"></div>
+            <button type="submit">Update</button>
+          </form>
+          <p class="back-to-plant-info go-back pointer">Nevermind</p>
+          <br>
+        </section>
+
+
+
+
+      </main>
+
+    </body>
+</html>
